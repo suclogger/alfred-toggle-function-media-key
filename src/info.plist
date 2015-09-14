@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>io.github.suclogger</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>22756B36-024B-463A-9435-A2CDD4795B96</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3FD9E16B-5A97-4958-BBAF-31B21D1E6672</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>AD4A7C12-5D72-40E5-ABB5-34A18B8F8A36</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3FD9E16B-5A97-4958-BBAF-31B21D1E6672</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>suclogger</string>
+	<key>description</key>
+	<string>Toggle Media/Function Keys</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Toggle Media/Function Keys</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>fn</string>
+				<key>text</key>
+				<string>Toggle Media/Function Keys</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>AD4A7C12-5D72-40E5-ABB5-34A18B8F8A36</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+	tell application "System Preferences" 
+		set current pane to pane "com.apple.preference.keyboard" 
+	end tell
+	tell application "System Events" to tell process "System Preferences" 
+		tell tab group 1 of window 1 
+			click radio button 1 
+			click checkbox 1 
+		end tell 
+	end tell 
+	quit application "System Preferences" 
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>3FD9E16B-5A97-4958-BBAF-31B21D1E6672</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>3</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>F</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>22756B36-024B-463A-9435-A2CDD4795B96</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>22756B36-024B-463A-9435-A2CDD4795B96</key>
+		<dict>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>3FD9E16B-5A97-4958-BBAF-31B21D1E6672</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>AD4A7C12-5D72-40E5-ABB5-34A18B8F8A36</key>
+		<dict>
+			<key>ypos</key>
+			<real>30</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/suclogger/alfred-toggle-function-media-key</string>
+</dict>
+</plist>
